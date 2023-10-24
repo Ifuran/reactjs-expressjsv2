@@ -7,7 +7,15 @@ var logger = require("morgan");
 
 var app = express();
 
+const { decodeToken } = require("./middlewares");
+const authRouter = require("./app/auth/router");
 const productRoute = require("./app/product/router");
+const categoryRoute = require("./app/category/router");
+const tagRoute = require("./app/tag/router");
+const deliveryAddressRoute = require("./app/deliveryAddress/router");
+const cartRoute = require("./app/cart/router");
+const orderRoute = require("./app/order/router");
+const invoiceRoute = require("./app/invoice/router");
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
@@ -20,9 +28,20 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use(cors());
+// Decode token
+app.use(decodeToken());
 
-// Create, Read, Update, Delete
+// Register user
+app.use("/auth", authRouter);
+
+// Routing product, category, tag, alamat pengiriman, cart
 app.use("/api", productRoute);
+app.use("/api", categoryRoute);
+app.use("/api", tagRoute);
+app.use("/api", deliveryAddressRoute);
+app.use("/api", cartRoute);
+app.use("/api", orderRoute);
+app.use("/api", invoiceRoute);
 
 // homepage
 app.use("/", (req, res) => {

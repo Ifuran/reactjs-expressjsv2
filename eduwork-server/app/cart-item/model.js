@@ -1,32 +1,34 @@
 const mongoose = require("mongoose");
 const { model, Schema } = mongoose;
 
-const productSchema = Schema(
+const cartItemSchema = Schema(
   {
     name: {
       type: String,
       required: [true, "Name harus diisi!"],
       minlength: [4, "Minimal 4 karakter!"],
     },
-    description: {
-      type: String,
-      maxlength: [1000, "Maksimal 1000 karakter!"],
+    qty: {
+      type: Number,
+      required: [true, "Kuantitas harus diisi!"],
+      minlength: [1, "Minimal 1 karakter!"],
     },
     price: {
       type: Number,
+      required: [true, "Price harus diisi!"],
       default: 0,
     },
     image_url: String,
-    category: {
+    user: {
       type: Schema.Types.ObjectId,
-      ref: "Category",
+      ref: "User",
     },
-    tags: {
+    product: {
       type: Schema.Types.ObjectId,
-      ref: "Tag",
+      ref: "Product",
     },
   },
   { timestamps: true }
 );
 
-module.exports = model("Product", productSchema);
+module.exports = model("CartItem", cartItemSchema);
