@@ -43,6 +43,13 @@ app.use("/api", cartRoute);
 app.use("/api", orderRoute);
 app.use("/api", invoiceRoute);
 
+// Akses gambar
+app.use(
+  "/gambar",
+  express.static(path.join(__dirname, "public/images/products"))
+);
+// End point mengirim gambar
+
 // homepage
 app.use("/", (req, res) => {
   res.render("index", {

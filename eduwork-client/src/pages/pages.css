@@ -1,0 +1,239 @@
+/* Register && Login */
+
+.wrapper-register,
+.wrapper-login {
+  background-color: var(--third-color);
+}
+
+.register-title,
+.login-title {
+  font-weight: 700;
+  color: var(--text-primary-color);
+}
+
+span.register-icon i,
+span.login-icon i {
+  font-size: 20px;
+}
+
+span.register-icon,
+input.register-input,
+input.register-input:focus,
+span.login-icon,
+input.login-input,
+input.login-input:focus {
+  background-color: var(--secondary-color);
+  border-radius: 20px;
+  font-size: 14px;
+  color: var(--text-primary-color);
+  border: none;
+  box-shadow: none;
+  height: 50px;
+}
+
+input.register-input::placeholder,
+input.login-input::placeholder {
+  color: var(--text-primary-color);
+}
+
+button.register-btn,
+button.login-btn {
+  border-radius: 20px;
+  font-size: 14px;
+  height: 50px;
+  color: var(--text-primary-color);
+  background-color: var(--button-color);
+}
+
+button.register-btn:hover,
+button.login-btn:hover {
+  background-color: var(--button-color);
+  opacity: 0.8;
+}
+
+.sign-in-link,
+.sign-up-link,
+.forget-pass-link {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--button-color);
+}
+
+/* End of Register && Login */
+
+/* Home */
+.home {
+  background-color: var(--primary-color);
+}
+
+.home .hero-img {
+  width: 350px;
+}
+
+.home .hero-title {
+  font-weight: 700;
+}
+
+.home .hero-description {
+  font-weight: 300;
+}
+
+.home .order-btn {
+  background-color: var(--button-color);
+  color: var(--text-primary-color);
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.home .order-btn:hover {
+  background-color: transparent;
+  border: 1px solid var(--button-color);
+  color: var(--button-color);
+}
+
+.home .home-services {
+  background-color: var(--secondary-color);
+  border-radius: 50px;
+}
+
+.home .home-services .services-icon {
+  font-size: 50px;
+}
+
+.home .home-category .wrapper-category {
+  background-color: var(--secondary-color);
+  border-radius: 50px;
+}
+
+.home .home-category .wrapper-category img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 55px;
+}
+
+.home .home-category .wrapper-category img.category-foods {
+  object-position: 35% 100%;
+}
+
+.home .home-category .wrapper-category img.category-drinks {
+  object-position: 90% 100%;
+}
+
+.wrapper-category:hover .category-image {
+  opacity: 0.3;
+}
+
+.wrapper-category:hover .category-link {
+  opacity: 1;
+}
+
+.category-link {
+  transition: 0.5s ease;
+  opacity: 0;
+}
+
+.category-link .category-text {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  transition: 0.5 ease;
+}
+
+.category-link .detail-btn {
+  background-color: var(--button-color);
+  color: var(--text-primary-color);
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: 700;
+  transition: 0.5 ease;
+}
+
+.category-link .detail-btn:hover {
+  background-color: transparent;
+  border: 1px solid var(--button-color);
+  color: var(--button-color);
+}
+
+.subscribe-wrapper {
+  background-color: var(--third-color);
+}
+
+.subscribe-wrapper .subscribe-title {
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.subscribe-element {
+  max-width: 500px;
+  margin: auto;
+}
+.subscribe-form .subscribe-input,
+.subscribe-form .subscribe-input:focus {
+  background-color: var(--secondary-color);
+  color: var(--text-primary-color);
+  border-radius: 20px;
+  box-shadow: none;
+}
+
+.subscribe-form .subscribe-btn {
+  background-color: var(--button-color);
+  color: var(--text-primary-color);
+  border-radius: 20px;
+  margin: auto;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.subscribe-form .subscribe-btn:hover {
+  background-color: transparent;
+  border: 1px solid var(--button-color);
+  color: var(--button-color);
+}
+
+/* End of Home */
+
+/* Product */
+
+.product {
+  background-color: var(--primary-color);
+}
+
+.product .search-form .search-input {
+  border-radius: 25px;
+}
+
+.product .search-form .search-btn-wrapper .search-btn {
+  border-radius: 50%;
+  background-color: var(--button-color);
+}
+
+.product .product-filter {
+  border: 5px solid var(--secondary-color);
+  border-radius: 10px;
+}
+
+.product .sort-wrapper .sort-input {
+  border-radius: 25px;
+}
+
+.product .sort-wrapper .sort-btn {
+  background-color: var(--button-color);
+  border-radius: 50%;
+  opacity: 1;
+}
+
+/* End of Product */
+
+@media (max-width: 576px) {
+  .home-wrapper,
+  .home-services {
+    margin: 0 1.5rem !important;
+  }
+  .category-link {
+    opacity: 1;
+  }
+}

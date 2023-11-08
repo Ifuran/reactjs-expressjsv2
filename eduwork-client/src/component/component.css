@@ -1,0 +1,115 @@
+/* Navigation  */
+
+.navbar {
+  background-color: var(--secondary-color);
+  color: var(--text-primary-color) !important;
+  /* height: 60px; */
+  border-radius: 0 0 50px 50px;
+}
+
+.navbar-brand {
+  color: var(--text-primary-color) !important;
+  font-weight: 700;
+}
+
+.navbar-middle-menu .navbar-link {
+  color: var(--text-primary-color) !important;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.navbar-right-menu .navbar-right-link {
+  font-size: 20px;
+}
+
+.navbar .navbar-link:hover {
+  text-decoration: underline;
+  opacity: 0.5;
+}
+
+/* End of Navigatioin */
+
+/* Breadcrumb */
+
+.breadcrumb-container {
+  background-color: var(--primary-color);
+  padding-bottom: 50px;
+}
+
+nav.breadcrumb-wrapper {
+  background-color: var(--third-color);
+  border-radius: 0 0 70px 70px;
+  font-weight: 700;
+}
+
+.breadcrumb-wrapper .breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+  color: var(--text-primary-color); /* Ganti dengan warna yang Anda inginkan */
+}
+
+/* End of Breadcrumb */
+
+/* Card */
+
+.card {
+  background-color: var(--secondary-color) !important;
+  margin: 0 5px;
+}
+
+/* End of Card  */
+
+/* Pagination  */
+
+.pagination-wrapper {
+  background-color: var(--primary-color);
+}
+
+.pagination-wrapper .pagination .page-item .page-link {
+  background-color: var(--third-color);
+  color: var(--text-primary-color);
+  font-weight: 500;
+}
+/* End of Pagination  */
+
+/* Footer  */
+
+.footer {
+  background-color: var(--secondary-color);
+}
+
+.footer .footer-brand {
+  font-weight: 700;
+}
+
+.footer .footer-description {
+  font-weight: 300;
+}
+
+.footer .list-link {
+  list-style-type: none;
+}
+
+.footer .list-link a {
+  text-decoration: none;
+  color: var(--text-primary-color);
+  font-weight: 300;
+  margin-left: 0;
+}
+
+.footer .list-link a:hover {
+  text-decoration: underline;
+}
+
+.footer .sosial-media-wrapper a {
+  font-size: 20px;
+}
+
+.footer .sosial-media-wrapper a:hover {
+  opacity: 0.5;
+}
+
+.footer .footer-copyright {
+  font-weight: 300;
+}
+
+/* End of Footer  */
